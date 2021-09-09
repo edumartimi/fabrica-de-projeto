@@ -380,7 +380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7799a3b824db03d418c159ac1efaf82d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mira: {fileID: 2800000, guid: 33a9b1d33d3065847897b00b80c48f15, type: 3}
+  mira: {fileID: 2800000, guid: 0c58686150b2d9844a90164505ab3392, type: 3}
 --- !u!4 &721890608
 Transform:
   m_ObjectHideFlags: 0
