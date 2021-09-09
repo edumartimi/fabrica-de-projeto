@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     public int bulletForce;
     public float tempobalas;
     public float tps;
+    //teste
 
     private void Start()
     {
