@@ -11,13 +11,36 @@ public class Player : MonoBehaviour
     public Transform posicaotiro;
     public GameObject bullet;
     public int bulletForce;
-    public float tempobalas;
-    public float tps;
-    //teste
+    public bool podeatirar;
+    public float carregando = 0f;
+    private float prec_carregar = 2f;
+    private KeyCode chargeAndShootKey = KeyCode.Mouse0;
+    private int municao;
+    private bool correr;
+
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "lanca")
+        {
+            municao++;
+            Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.tag == "bau")
+        {
+            prec_carregar = 1f;
+            Destroy(collision.gameObject);
+        }
+    }
+
+
+
 
     private void Start()
     {
         fisica = GetComponent<Rigidbody2D>();
+        municao = 5;
     }
 
     private void FixedUpdate() 
@@ -29,15 +52,53 @@ public class Player : MonoBehaviour
 
         transform.rotation = Quaternion.Euler(0f,0f, rotationZ);
 
-        Vector2 andar = new Vector2(Input.GetAxis("Horizontal") * velocidade,Input.GetAxis("Vertical") * velocidade);
-        fisica.velocity = andar;
-
-        tempobalas = tempobalas + Time.deltaTime;
-        if (Input.GetKey(KeyCode.Mouse0) && tempobalas > 1 / tps)
+        if (!correr)
         {
-            GameObject tmpbullet = Instantiate(bullet, posicaotiro.position, Quaternion.identity);
-            tmpbullet.GetComponent<Rigidbody2D>().AddForce(transform.right * bulletForce);
-            tempobalas = 0;
-        }   
+            Vector2 andar = new Vector2(Input.GetAxis("Horizontal") * velocidade, Input.GetAxis("Vertical") * velocidade);
+            fisica.velocity = andar;
+        }
+        if (correr)
+        {
+            Vector2 andar = new Vector2(Input.GetAxis("Horizontal") * velocidade*2, Input.GetAxis("Vertical") * velocidade*2);
+            fisica.velocity = andar;
+        }
+
+
+        print(municao);
+
+    }
+
+    private void Update()
+    {
+        if (Input.GetKey(chargeAndShootKey))
+        {
+            carregando += Time.deltaTime;
+        }
+        if (Input.GetKeyUp(chargeAndShootKey))
+        {
+            tirocarregado();
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftShift)) 
+        {
+            correr = true;
+        }
+
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            correr = false;
+        }
+
+
+        void tirocarregado()
+        {
+            if (carregando >= prec_carregar && municao >0)
+            {
+                GameObject tmpbullet = Instantiate(bullet, posicaotiro.position, Quaternion.identity);
+                tmpbullet.GetComponent<Rigidbody2D>().AddForce(transform.right * bulletForce);
+                municao--;
+            }
+            carregando = 0;
+        }
     }
 }
