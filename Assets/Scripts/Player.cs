@@ -40,7 +40,7 @@ public class Player : MonoBehaviour
     private void Start()
     {
         fisica = GetComponent<Rigidbody2D>();
-        municao = 5;
+        municao = 1;
     }
 
     private void FixedUpdate() 
