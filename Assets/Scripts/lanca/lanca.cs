@@ -13,7 +13,7 @@ public class lanca : MonoBehaviour
         tempo += Time.deltaTime;
         if (tempo>=1.5f) 
         {
-            Instantiate(lanc, transform.position, Quaternion.identity);
+            Instantiate(lanc, transform.position, transform.rotation);
             Destroy(gameObject);
         }
     }

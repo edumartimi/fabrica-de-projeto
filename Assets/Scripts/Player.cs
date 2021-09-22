@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -8,28 +9,30 @@ public class Player : MonoBehaviour
 
     private Rigidbody2D fisica;
     public int velocidade;
-    public Transform posicaotiro;
-    public GameObject bullet;
-    public int bulletForce;
-    public bool podeatirar;
-    public float carregando = 0f;
-    private float prec_carregar = 2f;
+    //public Transform posicaotiro;
+    //public GameObject bullet;
+    //public int bulletForce;
+    //public bool podeatirar;
+    //public float carregando = 0f;
+    //private float prec_carregar = 2f;
     private KeyCode chargeAndShootKey = KeyCode.Mouse0;
-    private int municao;
+    //private int municao;
     private bool correr;
+    //public Scrollbar atirar_lanca;
+    //public float velocidade_tempo_lanca;
+    public float boost;
 
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "lanca")
+        /*if (collision.gameObject.tag == "lanca")
         {
             municao++;
             Destroy(collision.gameObject);
-        }
+        }*/
 
         if (collision.gameObject.tag == "bau")
         {
-            prec_carregar = 1f;
             Destroy(collision.gameObject);
         }
     }
@@ -40,12 +43,13 @@ public class Player : MonoBehaviour
     private void Start()
     {
         fisica = GetComponent<Rigidbody2D>();
-        municao = 1;
+       /* municao = 1;
+        velocidade_tempo_lanca = 0.5f;*/
     }
 
     private void FixedUpdate() 
     {
-        Vector3 diferrence = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+       Vector3 diferrence = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         diferrence.Normalize();
 
         float rotationZ = Mathf.Atan2(diferrence.y, diferrence.x) * Mathf.Rad2Deg;
@@ -59,17 +63,18 @@ public class Player : MonoBehaviour
         }
         if (correr)
         {
-            Vector2 andar = new Vector2(Input.GetAxis("Horizontal") * velocidade*2, Input.GetAxis("Vertical") * velocidade*2);
+            Vector2 andar = new Vector2(Input.GetAxis("Horizontal") * velocidade*boost, Input.GetAxis("Vertical") * velocidade*2);
             fisica.velocity = andar;
         }
 
 
-        print(municao);
 
     }
 
     private void Update()
     {
+        //atirar_lanca.size = carregando*velocidade_tempo_lanca;
+        /*
         if (Input.GetKey(chargeAndShootKey))
         {
             carregando += Time.deltaTime;
@@ -78,6 +83,7 @@ public class Player : MonoBehaviour
         {
             tirocarregado();
         }
+        */
 
         if (Input.GetKeyDown(KeyCode.LeftShift)) 
         {
@@ -90,15 +96,16 @@ public class Player : MonoBehaviour
         }
 
 
-        void tirocarregado()
+        /*void tirocarregado()
         {
             if (carregando >= prec_carregar && municao >0)
             {
-                GameObject tmpbullet = Instantiate(bullet, posicaotiro.position, Quaternion.identity);
+                GameObject tmpbullet = Instantiate(bullet, posicaotiro.position, transform.rotation);
                 tmpbullet.GetComponent<Rigidbody2D>().AddForce(transform.right * bulletForce);
                 municao--;
             }
             carregando = 0;
         }
+        */
     }
 }
