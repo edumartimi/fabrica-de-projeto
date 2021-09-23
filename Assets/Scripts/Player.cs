@@ -8,28 +8,14 @@ public class Player : MonoBehaviour
 
     private Rigidbody2D fisica;
     public int velocidade;
-    public Transform posicaotiro;
-    public GameObject bullet;
-    public int bulletForce;
-    public bool podeatirar;
-    public float carregando = 0f;
-    private float prec_carregar = 2f;
-    private KeyCode chargeAndShootKey = KeyCode.Mouse0;
-    private int municao;
     private bool correr;
 
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "lanca")
-        {
-            municao++;
-            Destroy(collision.gameObject);
-        }
-
         if (collision.gameObject.tag == "bau")
         {
-            prec_carregar = 1f;
+
             Destroy(collision.gameObject);
         }
     }
@@ -40,7 +26,6 @@ public class Player : MonoBehaviour
     private void Start()
     {
         fisica = GetComponent<Rigidbody2D>();
-        municao = 1;
     }
 
     private void FixedUpdate() 
@@ -64,21 +49,10 @@ public class Player : MonoBehaviour
         }
 
 
-        print(municao);
-
     }
 
-    private void Update()
-    {
-        if (Input.GetKey(chargeAndShootKey))
-        {
-            carregando += Time.deltaTime;
-        }
-        if (Input.GetKeyUp(chargeAndShootKey))
-        {
-            tirocarregado();
-        }
-
+    private void Update() { 
+   
         if (Input.GetKeyDown(KeyCode.LeftShift)) 
         {
             correr = true;
@@ -89,16 +63,5 @@ public class Player : MonoBehaviour
             correr = false;
         }
 
-
-        void tirocarregado()
-        {
-            if (carregando >= prec_carregar && municao >0)
-            {
-                GameObject tmpbullet = Instantiate(bullet, posicaotiro.position, Quaternion.identity);
-                tmpbullet.GetComponent<Rigidbody2D>().AddForce(transform.right * bulletForce);
-                municao--;
-            }
-            carregando = 0;
-        }
     }
 }

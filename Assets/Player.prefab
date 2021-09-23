@@ -101,7 +101,7 @@ MonoBehaviour:
   velocidade: 12
   posicaotiro: {fileID: 2571849368481953491}
   bullet: {fileID: 6838434638026136545, guid: 716160986a11b5c46939a9e34f459a77, type: 3}
-  bulletForce: 1500
+  bulletForce: 0
   podeatirar: 0
   carregando: 0
 --- !u!50 &2571849367363613570
