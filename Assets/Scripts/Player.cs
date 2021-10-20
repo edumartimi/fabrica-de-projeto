@@ -46,7 +46,7 @@ public class Player : MonoBehaviour
             if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
             {
                 Vector2 andar = new Vector2(Input.GetAxis("Horizontal") * velocidade, Input.GetAxis("Vertical") * velocidade);
-                fisica.velocity = andar;
+                fisica.velocity = andar * Time.deltaTime;
             }
             else 
             {
