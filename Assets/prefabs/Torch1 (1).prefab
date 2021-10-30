@@ -24,9 +24,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4220226773394953954}
-  m_LocalRotation: {x: -0, y: -0, z: 0.70559806, w: 0.7086124}
+  m_LocalRotation: {x: 0, y: 0, z: 0.70559937, w: 0.70861095}
   m_LocalPosition: {x: -98.55, y: 36.15, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.4731002, y: 1.4731002, z: 1.4731}
   m_Children:
   - {fileID: 2680876751988616262}
   m_Father: {fileID: 0}
@@ -107,8 +107,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7076794988682667337}
-  m_LocalRotation: {x: -0, y: -0, z: -0.42830664, w: 0.9036335}
-  m_LocalPosition: {x: -0.08, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.0031941528, w: 0.9999949}
+  m_LocalPosition: {x: -0.035, y: 0.475, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7347795355590315255}
@@ -128,7 +128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.5
+  m_FalloffIntensity: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_LightVolumeOpacity: 0
@@ -137,12 +137,12 @@ MonoBehaviour:
   m_UseNormalMap: 0
   m_LightOrder: 0
   m_AlphaBlendOnOverlap: 0
-  m_ShadowIntensity: 0
+  m_ShadowIntensity: 1
   m_ShadowVolumeIntensity: 0
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 5.5266933
+  m_PointLightOuterRadius: 28.884495
   m_PointLightDistance: 3
   m_PointLightQuality: 1
   m_ShapeLightParametricSides: 5

@@ -11,6 +11,11 @@ public class Player : MonoBehaviour
     private bool correr;
     private float tmpcorrida;
     public float estamina;
+    public float velocidade_corrida;
+    public Animator animador;
+    private float andarx;
+    private float andary;
+    bool andando;
 
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -32,6 +37,8 @@ public class Player : MonoBehaviour
         
     private void FixedUpdate() 
     {
+     
+
         /*
         Vector3 diferrence = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         diferrence.Normalize();
@@ -45,7 +52,9 @@ public class Player : MonoBehaviour
         {
             if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
             {
-                Vector2 andar = new Vector2(Input.GetAxis("Horizontal") * velocidade, Input.GetAxis("Vertical") * velocidade);
+                andarx = Input.GetAxis("Horizontal") * velocidade;
+                andary = Input.GetAxis("Vertical") * velocidade;
+                Vector2 andar = new Vector2(andarx,andary);
                 fisica.velocity = andar * Time.deltaTime;
             }
             else 
@@ -56,7 +65,7 @@ public class Player : MonoBehaviour
         }
         if (correr)
         {
-            Vector2 andar = new Vector2(Input.GetAxis("Horizontal") * velocidade*2, Input.GetAxis("Vertical") * velocidade*2);
+            Vector2 andar = new Vector2(Input.GetAxis("Horizontal") * velocidade* velocidade_corrida, Input.GetAxis("Vertical") * velocidade*velocidade_corrida);
             fisica.velocity = andar;
         }
 
@@ -64,6 +73,18 @@ public class Player : MonoBehaviour
     }
 
     private void Update() {
+        if (fisica.velocity.y != 0 || fisica.velocity.x != 0)
+        {
+            andando = true;
+        }
+        else 
+        {
+            andando = false;
+        }
+        animador.SetBool("andando", andando);
+
+
+
         if (Input.GetKey(KeyCode.LeftShift)) 
         {
                 correr = true;
