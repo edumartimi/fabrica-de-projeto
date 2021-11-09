@@ -4,16 +4,51 @@ using UnityEngine;
 
 public class minotauro : MonoBehaviour
 {
-    private Rigidbody2D fisica;
-    // Start is called before the first frame update
-    void Start()
+    public float speed;
+    private Vector3 movimento;
+    private float mexendox;
+    private float mexendoy;
+    public Transform target;
+    public Transform lastTarget;
+    private float tmpmovimento;
+    bool girou;
+
+
+
+    void Start() 
     {
-        fisica = GetComponent<Rigidbody2D>();
+        girou = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
+        mexendox = transform.position.x;
+        mexendoy = transform.position.y;
         
+        tmpmovimento = tmpmovimento + Time.deltaTime;
+            
+        if (transform.position == target.position)
+        {
+              Transform[] points = target.GetComponent<waypoints>().nearbyPoints;
+              int rand = Random.Range(0, points.Length);
+              target = points[rand];
+        }
+        else 
+        {  
+              Vector3 movimento = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);      
+              transform.position = movimento;
+        }
+
+        if (transform.position.x != mexendox && !girou) 
+        {
+            transform.Rotate(0, 0, 90);
+            girou = true;
+        }
+        if (transform.position.y != mexendoy && girou)
+        {
+            transform.Rotate(0, 0, 90);
+            girou = false;
+        }
+
     }
 }
