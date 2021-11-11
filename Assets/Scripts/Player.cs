@@ -73,6 +73,8 @@ public class Player : MonoBehaviour
     }
 
     private void Update() {
+        print(transform.rotation.z);
+
         if (fisica.velocity.y != 0 || fisica.velocity.x != 0)
         {
             andando = true;
