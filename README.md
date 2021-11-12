@@ -64,11 +64,8 @@ São jovens atenienses que este ano os jovens atenienses escolhidos para o sacri
 
 O personagem pode apenas andar e coletar as chaves que esta pelo labirinto. 
 
-![image](https://user-images.githubusercontent.com/89167895/141510050-921e82bd-7082-47f8-952a-95d8df384b0e.png)
-![image](https://user-images.githubusercontent.com/89167895/141510094-6db45a8a-a3a6-442e-902e-77c349986964.png)
-![alt text](https://user-images.githubusercontent.com/89167895/141509139-0ae71c3b-1fac-4581-99eb-8862e8833bcb.png)
-![alt text](https://cdn.discordapp.com/attachments/880947541385031683/892495111064268850/New_Piskel.png)
-
+![image](https://user-images.githubusercontent.com/89167895/141511362-f4caf98c-40f5-490b-9bfa-bf5497f47a84.png)
+![image](https://user-images.githubusercontent.com/89167895/141511395-d4089986-0c6f-4125-ae1d-cc6a326102af.png)
 
 Controles 
 
@@ -92,11 +89,11 @@ O jogo é em 2D pixel art, um ambiente escuro que pode trazer uma pegada de terr
 
 
  
-![image](https://user-images.githubusercontent.com/89167895/141510635-652082d2-1499-4f4c-bbe3-dc7032865831.png)
+![image](https://user-images.githubusercontent.com/89167895/141511630-ed109b63-1496-46b3-a9a8-1b7e553febab.png)
 
 
 
-![image](https://user-images.githubusercontent.com/89167895/141510671-5b03690b-ea17-4009-9978-936b3187ecac.png)
+![image](https://user-images.githubusercontent.com/89167895/141511659-72bfb993-5ce0-45c6-8af5-ecc1a1a0cb55.png)
 
 
  
