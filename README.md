@@ -5,14 +5,14 @@
   Labirinto de Creta
   
 • Uma descrição em uma linha do funcionamento do jogo;
- O personagem é jogado em um labirinto cheio de criaturas misteriosas e precisa resolver puzzle para fugir.
+ O personagem é jogado em um labirinto com uma criatura misteriosa mas você precisa fugir dessa criatura.
 
 • Definição do seu gênero (se é de ação, ou RPG, por exemplo);
- Aventura, Ação, fantasia, puzzle, terror. 
+ Aventura, Ação, fantasia, terror. 
 
 • Suas mecânicas principais (um conjunto de regras);
  "A" anda para esquerda, "S" anda para baixo, "D" para direita e "W" para cima,
- "E" usar a coletavel, mouse movimenta a mira.
+ "E" usar a coletavel.
 
 • Uma breve descrição da história do jogo;
  As tradições na antiga Grécia eram festejadas e admiradas por todo o território grego,
@@ -40,4 +40,4 @@ tradição os jovens escolhidos treinando na frente do Parthenon da deusa Athena
  Não pensamos sobre isso ainda.
 
 • Qual objetivo de desenvolvimento sustentável da ONU foi utilizado no projeto
- Educação de qualidade e Igualdade de Gênero
+ Educação de qualidade
