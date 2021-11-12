@@ -101,7 +101,7 @@ Inimigos
 
 Minotauro fica andando pelo labirinto a procura do player, não tem como matar o minotauro você apenas tem a opção de fugir. 
 
-![image](https://user-images.githubusercontent.com/89167895/141510874-4ec69edd-997a-4ea1-9d7e-941df007654e.png)
+![image](https://user-images.githubusercontent.com/89167895/141511741-d2da1ada-4490-4256-8321-0f2f7dec57b6.png)
  
 
 
