@@ -10,6 +10,10 @@ public class menu : MonoBehaviour
     public void novoJogo()
     {
         SceneManager.LoadScene("gameplay");
-    
+    }
+
+    public void sair_do_jogo()
+    {
+        Application.Quit();
     }
 }

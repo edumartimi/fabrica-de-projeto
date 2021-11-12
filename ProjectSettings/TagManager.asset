@@ -7,6 +7,9 @@ TagManager:
   - lanca
   - bau
   - inimigo
+  - final
+  - key
+  - barreira
   layers:
   - Default
   - TransparentFX

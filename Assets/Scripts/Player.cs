@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class Player : MonoBehaviour
 {
 
-
+    public Game_manager gerenciador;
     private Rigidbody2D fisica;
     public int velocidade;
     private bool correr;
@@ -15,6 +17,8 @@ public class Player : MonoBehaviour
     public Animator animador;
     private float andarx;
     private float andary;
+    public int qtdchaves;
+    private int qtdchavesfaltantes;
     bool andando;
 
 
@@ -27,9 +31,35 @@ public class Player : MonoBehaviour
         }
         if (collision.gameObject.tag == "inimigo") 
         {
-            Destroy(this);
+            gerenciador.Game_over();
+        }
+        
+        if (collision.gameObject.tag == "barreira" && qtdchaves<3) 
+        {
+            gerenciador.faltam_chaves.GetComponent<TextMeshProUGUI>().text = "O portão esta trancado, faltam "+ qtdchavesfaltantes + " chaves";
+            gerenciador.faltamchaves();
         }
 
+        if (collision.gameObject.tag == "barreira" && qtdchaves >= 3) 
+        {
+            gerenciador.faltam_chaves.GetComponent<TextMeshProUGUI>().text = "Parabéns, Você encontrou todas as chaves e agora esta livre";
+            Destroy(collision.gameObject);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "key") 
+        {
+            qtdchaves++;
+            Destroy(collision.gameObject);
+        }
+
+
+        if (collision.gameObject.tag == "final") 
+        {
+            gerenciador.Game_win();
+        }
     }
 
 
@@ -42,6 +72,7 @@ public class Player : MonoBehaviour
         
     private void FixedUpdate() 
     {
+        qtdchavesfaltantes = 3 - qtdchaves;
      
         /*
         Vector3 diferrence = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
@@ -77,7 +108,6 @@ public class Player : MonoBehaviour
     }
 
     private void Update() {
-        print(transform.rotation.z);
 
         if (fisica.velocity.y != 0 || fisica.velocity.x != 0)
         {

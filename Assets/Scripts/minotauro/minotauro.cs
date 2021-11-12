@@ -61,7 +61,6 @@ public class minotauro : MonoBehaviour
         eixoy = mexendoy - mexendoyatra;
         eixox = mexendox - mexendoxatra;
 
-        print(transform.rotation.z);
         
         if (eixoy > 0)
         {
@@ -95,7 +94,6 @@ public class minotauro : MonoBehaviour
         }
 
 
-        print(transform.rotation.z);
 
         if (eixox > 0)
         { 
