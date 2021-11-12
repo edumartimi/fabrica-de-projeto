@@ -47,145 +47,65 @@ tradição os jovens escolhidos treinando na frente do Parthenon da deusa Athena
  
  //GDD
  
-  
-
+ 
 História 
 
- 
+Por uma misteriosa criatura que vive nos labirintos abaixo da grande cidade de Creta cansados de tamanha desonra e desoladora violência com seu povo, este ano os jovens atenienses escolhidos para o sacrifício foram secretamente treinados para que matassem a criatura.
 
-      Por uma misteriosa criatura que vive nos labirintos abaixo da grande cidade de Creta cansados de tamanha desonra e desoladora violência com seu povo, este ano os jovens atenienses escolhidos para o sacrifício foram secretamente treinados para que matassem a criatura.
-Quebra de Página
- 
 
 Gameplay 
 
- 
-
 A mecânica do jogo é "A" anda para esquerda, "E" anda para baixo, "D" para direita e "W" para cima, "E" usar a coletável.com o jogo Rolando você irá encontrar uma criatura misteriosa que vive naquele lugar e não deve encostar na criatura e nem nas suas armadilhas. Para fugir do labirinto de Creta precisa de 3 chaves que estão perdidas pelo labirinto. 
 
- 
-
- 
-
- 
-
- 
-
-Quebra de Página
- 
 
 Personagens 
-
- 
 
 São jovens atenienses que este ano os jovens atenienses escolhidos para o sacrifício foram secretamente treinados para que matassem a criatura e acabassem com esta terrível tradição. 
 
 O personagem pode apenas andar e coletar as chaves que esta pelo labirinto. 
 
- 
-
- 
-
-Tela preta com letras brancas
-
-Descrição gerada automaticamente       Interface gráfica do usuário, Aplicativo
-
-Descrição gerada automaticamente 
-
- 
-
- 
-
- 
-
--  
-
-Quebra de Página
- 
+![image](https://user-images.githubusercontent.com/89167895/141511362-f4caf98c-40f5-490b-9bfa-bf5497f47a84.png)
+![image](https://user-images.githubusercontent.com/89167895/141511395-d4089986-0c6f-4125-ae1d-cc6a326102af.png)
 
 Controles 
 
- 
+Os controles são “A”, “D”, ”S”, “W” para  andar e “E” para pegar coletável.
 
-Os controles são “A”, “D”, ”S”, “W” para  andar e “E” para pegar coletável. 
+![image](https://user-images.githubusercontent.com/89167895/141509819-e412c609-2552-425e-a5d8-d9642c0e1448.png)
 
- 
-
-Pbt keycaps wasd/teclas de seta keycaps cherry mx chaves não impresso para  mx switches teclado mecânico do jogo|Teclados| - AliExpress
-Quebra de Página
- 
 
 Câmera 
 
- 
-
 O jogo está em top down view, que basicamente uma visão apenas de cima. 
 
- 
+ ![image](https://user-images.githubusercontent.com/89167895/141510356-15df6896-45d5-4434-a049-16152181be56.png)
 
-                          Uma imagem contendo eletrônico, circuito
-
-Descrição gerada automaticamente
-Quebra de Página
- 
 
 Universo do Jogo 
-
  
-
 O jogo é em 2D pixel art, um ambiente escuro que pode trazer uma pegada de terror e uma música para complementar a ambientação 
 
- 
+![image](https://user-images.githubusercontent.com/89167895/141510584-8121423b-1299-4e16-8afa-14c19ceaf1a9.png)
+
 
  
+![image](https://user-images.githubusercontent.com/89167895/141511630-ed109b63-1496-46b3-a9a8-1b7e553febab.png)
 
-Inserindo imagem... 
 
- 
 
- 
+![image](https://user-images.githubusercontent.com/89167895/141511659-72bfb993-5ce0-45c6-8af5-ecc1a1a0cb55.png)
 
- 
 
  
-
-Quebra de Página
- 
-
 Inimigos 
-
- 
-
-- Descrição e ilustração dos inimigos que existem no universo do jogo; 
-
- 
-
- 
 
 Minotauro fica andando pelo labirinto a procura do player, não tem como matar o minotauro você apenas tem a opção de fugir. 
 
+![image](https://user-images.githubusercontent.com/89167895/141511741-d2da1ada-4490-4256-8321-0f2f7dec57b6.png)
  
 
- 
-
-                                          
-
- 
-
- 
-
- 
 
 Os Traidores ficam presos em uma cadeia no labirinto que protege uma das chaves. 
 
- 
+![image](https://user-images.githubusercontent.com/89167895/141511004-d9e2fc3a-5a71-45d6-93d3-94b694f474d4.png)
 
- 
-
-                                             
-
- 
-
- 
-
- 
