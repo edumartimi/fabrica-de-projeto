@@ -25,6 +25,11 @@ public class Player : MonoBehaviour
 
             Destroy(collision.gameObject);
         }
+        if (collision.gameObject.tag == "inimigo") 
+        {
+            Destroy(this);
+        }
+
     }
 
 
@@ -37,8 +42,7 @@ public class Player : MonoBehaviour
         
     private void FixedUpdate() 
     {
-     //SÓ PRA SUBIR NO GITHUB KKKKK
-
+     
         /*
         Vector3 diferrence = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         diferrence.Normalize();

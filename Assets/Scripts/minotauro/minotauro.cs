@@ -61,7 +61,7 @@ public class minotauro : MonoBehaviour
         eixoy = mexendoy - mexendoyatra;
         eixox = mexendox - mexendoxatra;
 
-
+        print(transform.rotation.z);
         
         if (eixoy > 0)
         {
