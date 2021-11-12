@@ -1,4 +1,7 @@
 # fabrica-de-projeto
+
+//HIGH CONCEPT
+
  Jogo da fabrica de projeto
  
  • Titulo:
@@ -41,3 +44,7 @@ tradição os jovens escolhidos treinando na frente do Parthenon da deusa Athena
 
 • Qual objetivo de desenvolvimento sustentável da ONU foi utilizado no projeto
  Educação de qualidade
+ 
+ //GDD
+ 
+ 
