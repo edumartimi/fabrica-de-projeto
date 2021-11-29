@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 3938542703387635850}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -230.5784, y: 136.22922, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.3369536, y: 0.33101887, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6d1a19208de42fc4f80f8913d1c0df9a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 50e934ec897fea14f8260033501e5ee5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,7 +100,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 8.533334, y: 8.533334}
+    oldSize: {x: 6.4, y: 6.4}
     newSize: {x: 1.28, y: 1.28}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -108,17 +108,18 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.3790741, y: 1.2641602}
-      - {x: -0.88697815, y: 2.0046387}
-      - {x: -1.8666668, y: 2}
-      - {x: -2.4, y: 1.8666668}
-      - {x: -2.4, y: 0.33333334}
-      - {x: -2.266667, y: 0}
-      - {x: 2.4, y: 0}
-      - {x: 2.5333335, y: 0.13333334}
-      - {x: 2.466439, y: 1.2998861}
-    - - {x: -1.8000001, y: 1.2}
-      - {x: -1.2, y: 1.4000001}
-      - {x: -1, y: 0.8000001}
-      - {x: -1.2, y: 0.6}
-      - {x: -1.6000001, y: 0.6666667}
+    - - {x: 0.57628787, y: 1.5154542}
+      - {x: 0.34432983, y: 0.47781372}
+      - {x: -2.7288635, y: 0.49174196}
+      - {x: -2.9154541, y: 0.41030276}
+      - {x: -2.9628785, y: -1.210318}
+      - {x: -2.1655273, y: -1.3031311}
+      - {x: -1.3257569, y: -1.3968934}
+      - {x: -1.259613, y: -1.1273346}
+      - {x: -0.98553467, y: -0.48890686}
+      - {x: 0.3526001, y: -0.56056213}
+      - {x: 0.7297058, y: -1.6349335}
+      - {x: 2.0309083, y: -1.6814393}
+      - {x: 2.5628784, y: -1.3525757}
+      - {x: 2.5908813, y: 0.8186035}
+      - {x: 2.373181, y: 1.6103028}

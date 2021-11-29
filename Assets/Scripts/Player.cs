@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
     public int qtdchaves;
     private int qtdchavesfaltantes;
     bool andando;
+    public GameObject UI_qtdchaves;
 
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -73,7 +74,8 @@ public class Player : MonoBehaviour
     private void FixedUpdate() 
     {
         qtdchavesfaltantes = 3 - qtdchaves;
-     
+        UI_qtdchaves.GetComponent<TextMeshProUGUI>().text = qtdchaves+"/3";
+
         /*
         Vector3 diferrence = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         diferrence.Normalize();

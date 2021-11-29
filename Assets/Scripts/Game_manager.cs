@@ -17,6 +17,7 @@ public class Game_manager : MonoBehaviour
     public GameObject iniciogame;
     public GameObject faltam_chaves;
     private float tmptxt;
+    public GameObject UI_chaves;
 
     // Start is called before the first frame update
 
@@ -29,6 +30,7 @@ public class Game_manager : MonoBehaviour
         volume.value = 1;
         Time.timeScale = 1;
         faltam_chaves.SetActive(false);
+        UI_chaves.SetActive(true);
     }
 
     private void Start()
@@ -75,6 +77,7 @@ public class Game_manager : MonoBehaviour
         pausado = true;
         painel.SetActive(true);
         AudioListener.pause = true;
+        UI_chaves.SetActive(false);
     }
 
     public void voltar()
@@ -83,6 +86,18 @@ public class Game_manager : MonoBehaviour
         pausado = false;
         painel.SetActive(false);
         AudioListener.pause = false;
+        UI_chaves.SetActive(true);
+    }
+
+    public void reiniciar()
+    {
+        Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.name);
+        Time.timeScale = 1;
+        pausado = false;
+        painel.SetActive(false);
+        AudioListener.pause = false;
+        UI_chaves.SetActive(true);
     }
 
     public void muteall()
@@ -110,6 +125,7 @@ public class Game_manager : MonoBehaviour
         Time.timeScale = 0;
         pausado = true;
         AudioListener.pause = false;
+        UI_chaves.SetActive(false);
     }
 
     public void Game_win() 
