@@ -18,6 +18,7 @@ public class Game_manager : MonoBehaviour
     public GameObject faltam_chaves;
     private float tmptxt;
     public GameObject UI_chaves;
+    public GameObject menucontroles;
 
     // Start is called before the first frame update
 
@@ -87,6 +88,11 @@ public class Game_manager : MonoBehaviour
         painel.SetActive(false);
         AudioListener.pause = false;
         UI_chaves.SetActive(true);
+    }
+
+    public void menu1() 
+    {
+        menucontroles.SetActive(false);
     }
 
     public void reiniciar()
