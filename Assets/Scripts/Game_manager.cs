@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class Game_manager : MonoBehaviour
 {
@@ -13,12 +14,15 @@ public class Game_manager : MonoBehaviour
     public Slider volume;
     private float qtdvolume;
     public GameObject gameover_painel;
+    public GameObject gameover_painel2;
     private float tmpinicio;
     public GameObject iniciogame;
     public GameObject faltam_chaves;
     private float tmptxt;
     public GameObject UI_chaves;
     public GameObject menucontroles;
+    public GameObject painel_pergaminho;
+    public GameObject painel_venceu;
 
     // Start is called before the first frame update
 
@@ -72,6 +76,19 @@ public class Game_manager : MonoBehaviour
         }
     }
 
+    public void lerpergaminho(string texto) 
+    {
+        painel_pergaminho.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+
+    public void voltarpergaminho(string texto)
+    {
+        painel_pergaminho.SetActive(false);
+        Time.timeScale = 1;
+    }
+
     public void pause()
     {
         Time.timeScale = 0;
@@ -90,9 +107,17 @@ public class Game_manager : MonoBehaviour
         UI_chaves.SetActive(true);
     }
 
+    public void vocevenceu() 
+    {
+        painel_venceu.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+
     public void menu1() 
     {
         menucontroles.SetActive(false);
+        Time.timeScale = 1;
     }
 
     public void reiniciar()
@@ -125,13 +150,25 @@ public class Game_manager : MonoBehaviour
         SceneManager.LoadScene("Menu");
     }
 
-    public void Game_over() 
+    public void Game_over(int tipo) 
     {
-        gameover_painel.SetActive(true);
-        Time.timeScale = 0;
-        pausado = true;
-        AudioListener.pause = false;
-        UI_chaves.SetActive(false);
+
+        if (tipo == 1)
+        {
+            gameover_painel.SetActive(true);
+            Time.timeScale = 0;
+            pausado = true;
+            AudioListener.pause = false;
+            UI_chaves.SetActive(false);
+        }
+        else if (tipo == 0)
+        {
+            gameover_painel2.SetActive(true);
+            Time.timeScale = 0;
+            pausado = true;
+            AudioListener.pause = false;
+            UI_chaves.SetActive(false);
+        }
     }
 
     public void Game_win() 

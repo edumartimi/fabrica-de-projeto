@@ -3,7 +3,6 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - Game_manager
     - Player
-    - bau
     - menu
     - minotauro
     - waypoints
@@ -76,8 +75,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -284,8 +285,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 1610}
     - Class: 114
       Script: {instanceID: 1614}
-    - Class: 114
-      Script: {instanceID: 2278}
     - Class: 114
       Script: {instanceID: 2294}
     - Class: 114
@@ -691,7 +690,7 @@ ScriptsOnlyBuild:
     className: ShadowCaster2D
   - hash:
       serializedVersion: 2
-      Hash: eeea84bfca8af910a76519149d1cecc6
+      Hash: f46911238a9df99d5361f00904fedef4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player
@@ -1435,7 +1434,7 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
-      Hash: be22ac5c8b353e69bebd149803a4221e
+      Hash: c2627f2e8290548ef0515e5974c980a8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Game_manager
@@ -1809,5 +1808,5 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/gameplay.unity
-  playerPath: C:/Users/Eduardo Martimiano/Desktop/versao apresentacao/Labirinto de
+  playerPath: C:/Users/Eduardo Martimiano/Desktop/uuuuuultima versao/Labirinto de
     Creta.exe

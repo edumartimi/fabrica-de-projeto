@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
     private int qtdchavesfaltantes;
     bool andando;
     public GameObject UI_qtdchaves;
+    private int pergaminhos;
 
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -32,9 +33,14 @@ public class Player : MonoBehaviour
         }
         if (collision.gameObject.tag == "inimigo") 
         {
-            gerenciador.Game_over();
+            gerenciador.Game_over(0);
         }
-        
+
+        if (collision.gameObject.tag == "minotauro")
+        {
+            gerenciador.Game_over(1);
+        }
+
         if (collision.gameObject.tag == "barreira" && qtdchaves<3) 
         {
             gerenciador.faltam_chaves.GetComponent<TextMeshProUGUI>().text = "O portão esta trancado, faltam "+ qtdchavesfaltantes + " chaves";
@@ -56,10 +62,20 @@ public class Player : MonoBehaviour
             Destroy(collision.gameObject);
         }
 
+        if (collision.gameObject.tag == "pergaminho")
+        {
+            pergaminhos++;
+            Destroy(collision.gameObject);
+        }
 
         if (collision.gameObject.tag == "final") 
         {
-            gerenciador.Game_win();
+            gerenciador.vocevenceu();
+        }
+
+        if (collision.gameObject.tag == "parede_falsa")
+        {
+            Destroy(collision.gameObject);
         }
     }
 
@@ -121,7 +137,10 @@ public class Player : MonoBehaviour
         }
         animador.SetBool("andando", andando);
 
-
+        if (Input.GetKeyDown(KeyCode.E) && pergaminhos == 1) 
+        {
+            gerenciador.lerpergaminho("Considerado uma figura mitológica assustadora, reza a lenda que o Minotauro, filho do Rei de Minos, nasceu na ilha de Creta.");
+        }
 
         if (Input.GetKey(KeyCode.LeftShift)) 
         {

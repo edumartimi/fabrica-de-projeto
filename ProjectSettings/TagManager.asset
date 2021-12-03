@@ -10,6 +10,9 @@ TagManager:
   - final
   - key
   - barreira
+  - minotauro
+  - pergaminho
+  - parede_falsa
   layers:
   - Default
   - TransparentFX
